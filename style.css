@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial";
+}
+
+p {
+    color: red
+}
+
+#canvas {
+    z-index: 10;
+    mix-blend-mode: multiply;
+    top: 0;
+}
+
+#canvas2 {
+    z-index: 5;
+    mix-blend-mode: multiply;
+    position: fixed;
+    top: 0
+}
+
+
+.colorSelector {
+    display: flex;
+    align-items: top;
+    z-index: 250;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.colorBox {
+    height: 40px;
+    width: 40px;
+    margin: 5px 10px;
+    background-color: gray;
+    transition: .2s ease;
+}
+
+.colorBox:hover {
+    width: 70px;
+    cursor: pointer;
+}
+
+.colorBox:active {
+    opacity: .4;
+}
+
+.color1 {
+    background: #6cbed4;
+}
+.color2 {
+    background: #fef14a;
+}
+.color3 {
+    background: #353938;
+}
+.color4 {
+    background: #f50a0a;
+}
+.color5 {
+    background: #878c90;
+}
+.color6 {
+    background: #000000;
+}
+.color7 {
+    background: url("./eraser.svg");
+    background-size: contain;
+}
+
+.color7:hover {
+    width: 40px
+}
+
+.logo { 
+    height: 80px;
+    width: 80px;
+    background: url("./logo\ dark.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.topLeft {
+    z-index: 200;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+
+.bottomRight a {
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    z-index: 150;
+    bottom: 0;    
+    right: 0
+}
+
+.bottomLeft a {
+    color: black;
+    margin: 20px;
+    text-decoration: none;
+    position: fixed;
+    z-index: 150;
+    bottom: 0;    
+    right: 0;
+}
+
+.topRight {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    text-align: right;
+    z-index: 300;
+}
+
+.topRight a {
+    color: black;
+    text-decoration: none;
+}
+
+.topRight a:hover {
+    opacity: .8
+}
+
+.overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    background-image: url("./obongjayar\ overlay.png");
+    z-index: 300;
+}
+
+.overlay2 {
+    height: 800px;
+    width: 800px;
+    background-image: url("./colorme.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.overlayWrap {
+    position: fixed;
+    /* background-color: red; */
+    pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.frame {
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    z-index: 500;
+    pointer-events: none;
+    /* height: 2000px;
+    width: 2000px; */    
+    background: url("./frame.png");
+    background-position: center ;
+    /* background-size: cover; */
+    /* background-size: cover; */
+    height: 2000px;
+    width: 2000px;
+    overflow: hidden;
+
+}
+
+@media (max-width: 500px) {
+
+.frame { display: none}
+    .topLeft {
+        z-index: 200;
+        /* top: 0;
+        left: 0; */
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 100vw;
+        align-items: center;
+    }
+    .overlay2 {
+        height: 100vw;
+        width: 100vw;
+        background-image: url("./colorme.jpg");
+        background-size: contain;
+        margin-bottom: 100px;
+    }
+    .colorSelector {
+        display: flex;
+        align-items: top;
+        z-index: 250;
+        flex-direction: row;
+        /* margin-left: 30px; */
+    }
+    .topRight {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        /* right: 0; */
+        /* margin: 20px; */
+        text-align: right;
+        z-index: 300;
+        width: 100vw;
+    }
+
+    .colorBox {
+        height: 30px;
+        width: 30px;
+        margin: 5px 5px;
+        /* background-color: gray; */
+        transition: .2s ease;
+    }
+    
+    .colorBox:hover {
+        width: 40px;
+        cursor: pointer;
+    }
+    
+    .colorBox:active {
+        opacity: .4;
+    }
+
+    .topRight {
+        /* position: fixed;
+        top: 0;
+        right: 0; */
+        text-align: center;
+        z-index: 300;
+        margin: 0 0 20px 0;
+    }
+
+}
